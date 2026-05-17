@@ -61,16 +61,16 @@ bindsym $mod+f exec nautilus
 bindsym Mod1+Escape exec bash -c 'convert ~/Pictures/ubuntu.png -resize 1920x1080^ -gravity center -extent 1920x1080 /tmp/i3-single.png && convert +append /tmp/i3-single.png /tmp/i3-single.png /tmp/i3lock.png && i3lock -i /tmp/i3lock.png'
 
 # Borders
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
 
 # Gaps
-gaps inner 1
-gaps outer 1
+gaps inner 0
+gaps outer 0
 
 # Remove these old lines if present:
 # for_window [class="^.*"] border none
-# hide_edge_borders both
+hide_edge_borders both
 
 # Border colors
 # client.focused          #89b4fa #89b4fa #1e1e2e #89b4fa #89b4fa
