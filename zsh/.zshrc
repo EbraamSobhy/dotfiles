@@ -137,9 +137,9 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/go/bin
 
-
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH=$GOROOT/bin:$PATH
+
