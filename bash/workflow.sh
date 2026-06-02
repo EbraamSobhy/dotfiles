@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 
-projects="$HOME/Coding"
+DIR1="$HOME/Coding"
+DIR2="$HOME/Working"
 
-selected=$(find "$projects" -maxdepth 2 -type d | fzf)
+# Choose base directory
+BASE_DIR=$(
+    printf "%s\n%s\n" "$DIR1" "$DIR2" |
+    fzf --prompt="Select base directory: "
+)
 
-[ -z "$selected" ] && exit
+[ -z "$BASE_DIR" ] && exit 0
+[ ! -d "$BASE_DIR" ] && exit 1
 
-session=$(basename "$selected")
+# Choose project folder inside selected directory
+SELECTED=$(
+    find "$BASE_DIR" -mindepth 1 -maxdepth 1 -type d |
+    fzf --prompt="Select project: "
+)
 
-tmux new-session -d -s "$session" -c "$selected"
+[ -z "$SELECTED" ] && exit 0
 
-tmux send-keys -t "$session" "nvim ." C-m
-
-tmux attach -t "$session"
+tmux new-session -c "$SELECTED"
