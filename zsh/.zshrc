@@ -127,14 +127,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/.local/bin:$PATH
 
-# Android SDK
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/emulator
-export ANDROID_HOME=$HOME/Android/Sdk
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/go/bin
 
 export GOROOT=/usr/local/go
@@ -142,4 +134,3 @@ export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH=$GOROOT/bin:$PATH
-
