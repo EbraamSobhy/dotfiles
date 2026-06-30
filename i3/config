@@ -48,6 +48,9 @@ floating_modifier $mod
 # Set wallpaper on startup or (--bg-max)
 exec_always --no-startup-id feh --bg-fill /home/pero/Pictures/ubuntu.png
 
+# Force GTK apps (Nautilus, gnome-terminal, etc.) to prefer dark mode
+exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
@@ -55,7 +58,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+q kill
 
 # Open File Manager
-bindsym $mod+f exec nautilus
+bindsym $mod+f exec env XDG_CURRENT_DESKTOP=GNOME GTK_THEME=Yaru-dark nautilus
 
 # Sleep mode
 bindsym Mod1+Escape exec bash -c 'convert ~/Pictures/ubuntu.png -resize 1920x1080^ -gravity center -extent 1920x1080 /tmp/i3-single.png && convert +append /tmp/i3-single.png /tmp/i3-single.png /tmp/i3lock.png && i3lock -i /tmp/i3lock.png'
@@ -144,7 +147,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Settings
-bindsym $mod+s exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+bindsym $mod+s exec env XDG_CURRENT_DESKTOP=GNOME GTK_THEME=Yaru-dark gnome-control-center
 
 # focus the child container
 #bindsym $mod+d focus child

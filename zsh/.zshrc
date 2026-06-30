@@ -138,3 +138,5 @@ export PATH=$GOROOT/bin:$PATH
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="/usr/local/bin:$PATH"
