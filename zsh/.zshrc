@@ -144,3 +144,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # PHP
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+export PATH="$HOME/.local/bin:$PATH"
