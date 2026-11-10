@@ -142,9 +142,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-# PHP
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-
-# Load Angular CLI autocompletion.
+# Angular CLI autocompletion.
 source <(ng completion script)
 export PATH="$HOME/.local/bin:$PATH"
+eval "$(~/.local/bin/mise activate)"
