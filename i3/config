@@ -213,6 +213,13 @@ for_window [class="Brave-browser"] border pixel 0
 assign [class="^love$"] number 8
 for_window [class="^love$"] move container to workspace number 8
 
+# LÖVR
+assign [class="^L..VR$"] number 8
+for_window [class="^L..VR$"] move container to workspace number 8
+
+assign [class="^L.+VR$"] number 8
+for_window [class="^L.+VR$"] move container to workspace number 8
+
 # default_border pixel 0
 # default_floating_border pixel 0
 # gaps inner 0

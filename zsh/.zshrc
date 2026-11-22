@@ -140,7 +140,6 @@ export PATH=$GOROOT/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
 # Angular CLI autocompletion.
 source <(ng completion script)
