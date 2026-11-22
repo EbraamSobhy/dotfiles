@@ -208,6 +208,9 @@ for_window [class="GNOME-terminal"] border pixel 0
 
 for_window [class="Brave-browser"] border pixel 0
 
+# Love 2d
+for_window [class="love"] move container to workspace number 8
+
 # default_border pixel 0
 # default_floating_border pixel 0
 # gaps inner 0
